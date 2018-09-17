@@ -27,12 +27,22 @@
                                             <constraint firstAttribute="height" constant="375" id="Lse-UR-NuO"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjR-ux-Jba">
+                                        <rect key="frame" x="8" y="55" width="359" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
                                 <constraints>
+                                    <constraint firstItem="iyH-6d-9IM" firstAttribute="top" secondItem="rjR-ux-Jba" secondAttribute="bottom" constant="58" id="DM0-8F-nLJ"/>
                                     <constraint firstItem="iyH-6d-9IM" firstAttribute="centerY" secondItem="KZV-CQ-DnJ" secondAttribute="centerY" id="PDz-SY-uQ4"/>
+                                    <constraint firstItem="rjR-ux-Jba" firstAttribute="top" secondItem="KZV-CQ-DnJ" secondAttribute="top" constant="55" id="g6F-mF-Gah"/>
+                                    <constraint firstItem="rjR-ux-Jba" firstAttribute="leading" secondItem="KZV-CQ-DnJ" secondAttribute="leading" constant="8" id="hjL-pS-7mh"/>
                                     <constraint firstAttribute="trailing" secondItem="iyH-6d-9IM" secondAttribute="trailing" id="oqL-9X-mif"/>
+                                    <constraint firstAttribute="trailing" secondItem="rjR-ux-Jba" secondAttribute="trailing" constant="8" id="piH-jf-ePi"/>
                                     <constraint firstItem="iyH-6d-9IM" firstAttribute="leading" secondItem="KZV-CQ-DnJ" secondAttribute="leading" id="zwp-BW-dHR"/>
                                 </constraints>
                                 <connections>
@@ -54,6 +64,7 @@
                     </view>
                     <connections>
                         <outlet property="image" destination="iyH-6d-9IM" id="kgM-Kp-YrO"/>
+                        <outlet property="timerLabel" destination="rjR-ux-Jba" id="plx-py-DJu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -78,7 +89,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1740" y="843"/>
+            <point key="canvasLocation" x="1740" y="842.42878560719646"/>
         </scene>
         <!--Top View Controller-->
         <scene sceneID="grp-wD-Rwt">
