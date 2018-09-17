@@ -15,6 +15,8 @@ class CountDownViewController: UIViewController {
     var timer = Timer()
     var count = 3
     
+    var withIdentifier = String()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -42,7 +44,7 @@ class CountDownViewController: UIViewController {
         countDownLabel.text = String(count)
         if count == 0 {
             sender.invalidate() //止める
-            performSegue(withIdentifier: "timeAttack", sender: nil)
+            performSegue(withIdentifier: withIdentifier, sender: nil)
         }
         count -= 1
     }

@@ -12,11 +12,21 @@ class TopViewController: UIViewController {
 
     
     @IBAction func selectTimeAttack(_ sender: UIButton) {
-        performSegue(withIdentifier: "countDown", sender: nil)
+        performSegue(withIdentifier: "countDown", sender: "timeAttack")
+    }
+    
+    
+    @IBAction func selectMemoryAttack(_ sender: UIButton) {
+        performSegue(withIdentifier: "countDown", sender: "memoryAttack")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let countDownViewController = segue.destination as! CountDownViewController
+        countDownViewController.withIdentifier = sender as! String
     }
 
 }
