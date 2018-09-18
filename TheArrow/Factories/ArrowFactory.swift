@@ -57,4 +57,12 @@ class ArrowFactory {
                 return Arrow(image: UIImage(named: "up")!, direction: ArrowConst.up)
         }
     }
+    
+    static func createRundomArrowArray(level: Int)-> [Arrow] {
+        var arrowArray = [Arrow]()
+        for _ in 1...level {
+            arrowArray.append(createRundom())
+        }
+        return arrowArray
+    }
 }

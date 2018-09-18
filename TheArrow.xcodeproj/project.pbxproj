@@ -17,6 +17,7 @@
 		0C315BD3214F750A0094D6D5 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BD2214F750A0094D6D5 /* TopViewController.swift */; };
 		0C315BD5214F79920094D6D5 /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BD4214F79920094D6D5 /* CountDownViewController.swift */; };
 		0C315BDD214F95DB0094D6D5 /* TimeAttackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BDC214F95DB0094D6D5 /* TimeAttackViewController.swift */; };
+		0C315BDF214FDCF20094D6D5 /* MemoryAttackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		0C315BD2214F750A0094D6D5 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		0C315BD4214F79920094D6D5 /* CountDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
 		0C315BDC214F95DB0094D6D5 /* TimeAttackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAttackViewController.swift; sourceTree = "<group>"; };
+		0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAttackViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				0C315BD2214F750A0094D6D5 /* TopViewController.swift */,
 				0C315BD4214F79920094D6D5 /* CountDownViewController.swift */,
 				0C315BDC214F95DB0094D6D5 /* TimeAttackViewController.swift */,
+				0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				0C315BDD214F95DB0094D6D5 /* TimeAttackViewController.swift in Sources */,
 				0C315BAD214E8C730094D6D5 /* ArrowConst.swift in Sources */,
 				0C315B91214E5E620094D6D5 /* AppDelegate.swift in Sources */,
+				0C315BDF214FDCF20094D6D5 /* MemoryAttackViewController.swift in Sources */,
 				0C315BD5214F79920094D6D5 /* CountDownViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -91,16 +91,44 @@
             </objects>
             <point key="canvasLocation" x="1740" y="842.42878560719646"/>
         </scene>
-        <!--View Controller-->
+        <!--Memory Attack View Controller-->
         <scene sceneID="NMA-aT-gu2">
             <objects>
-                <viewController id="Xpk-3R-0v0" sceneMemberID="viewController">
+                <viewController id="Xpk-3R-0v0" customClass="MemoryAttackViewController" customModule="TheArrow" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BUX-IW-MBN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-xQ-BfB">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t9q-pE-xBc">
+                                        <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="375" id="c0H-Ey-bUJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="t9q-pE-xBc" firstAttribute="leading" secondItem="GIx-xQ-BfB" secondAttribute="leading" id="BJP-zF-VEJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="t9q-pE-xBc" secondAttribute="trailing" id="HaO-Zv-rt8"/>
+                                    <constraint firstItem="t9q-pE-xBc" firstAttribute="centerY" secondItem="GIx-xQ-BfB" secondAttribute="centerY" id="Hea-4U-xYU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="GIx-xQ-BfB" secondAttribute="trailing" id="Cxp-Oq-iAs"/>
+                            <constraint firstItem="GIx-xQ-BfB" firstAttribute="top" secondItem="BUX-IW-MBN" secondAttribute="top" id="Ekd-Pz-qn3"/>
+                            <constraint firstItem="GIx-xQ-BfB" firstAttribute="bottom" secondItem="M7p-TL-u1k" secondAttribute="bottom" id="nqB-t9-Xfa"/>
+                            <constraint firstItem="GIx-xQ-BfB" firstAttribute="leading" secondItem="BUX-IW-MBN" secondAttribute="leading" id="zGl-gh-1R3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="M7p-TL-u1k"/>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="t9q-pE-xBc" id="40Q-EL-wew"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsV-LH-tkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
