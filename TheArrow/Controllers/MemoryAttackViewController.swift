@@ -14,15 +14,23 @@ class MemoryAttackViewController: UIViewController {
     
     var arrowArray = [Arrow]()
     
-    var level = 1
+    var level = 3   // レベルを管理
     
     var index = 0
     
+    @IBOutlet var upGestureRecognizer: UISwipeGestureRecognizer!
+    
+    @IBOutlet var downGestureRecognizer: UISwipeGestureRecognizer!
+    
+    @IBOutlet var rightGestureRecognizer: UISwipeGestureRecognizer!
+    
+    @IBOutlet var leftGestureRecognizer: UISwipeGestureRecognizer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         arrowArray = ArrowFactory.createRundomArrowArray(level: level)
         displayArrows()
+        switchGestureEnabled(isEnabled: false)
     }
     
     func displayArrows() -> Void {
@@ -33,18 +41,60 @@ class MemoryAttackViewController: UIViewController {
             if self.arrowArray.count - 1 < index {
                 timer.invalidate()
                 self.imageView.isHidden = true
+                self.answer()
                 return
             }
             self.imageView.image = self.arrowArray[index].image
-            print(self.arrowArray[index].direction)
             index += 1
-//            self.imageView.isHidden = true
         })
-        
+    }
+    
+    func switchGestureEnabled(isEnabled: Bool) -> Void {
+        upGestureRecognizer.isEnabled = isEnabled
+        downGestureRecognizer.isEnabled = isEnabled
+        rightGestureRecognizer.isEnabled = isEnabled
+        leftGestureRecognizer.isEnabled = isEnabled
+    }
+    
+    
+    @IBAction func up(_ sender: UISwipeGestureRecognizer) {
+        if arrowArray[index].direction == ArrowConst.up {
+            print("up正解")
+            index += 1
+        } else {
+            print("up不正解")
+        }
+    }
+    
+    @IBAction func down(_ sender: UISwipeGestureRecognizer) {
+        if arrowArray[index].direction == ArrowConst.down {
+            print("down正解")
+            index += 1
+        } else {
+            print("down不正解")
+        }
+    }
+    
+    @IBAction func right(_ sender: UISwipeGestureRecognizer) {
+        if arrowArray[index].direction == ArrowConst.right {
+            print("right正解")
+            index += 1
+        } else {
+            print("right不正解")
+        }
+    }
+    
+    @IBAction func left(_ sender: UISwipeGestureRecognizer) {
+        if arrowArray[index].direction == ArrowConst.left {
+            print("left正解")
+            index += 1
+        } else {
+            print("left不正解")
+        }
     }
     
     func answer() -> Void {
-        
+        switchGestureEnabled(isEnabled: true)
     }
 
 }

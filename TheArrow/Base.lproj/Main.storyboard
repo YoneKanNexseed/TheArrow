@@ -110,11 +110,18 @@
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="t9q-pE-xBc" firstAttribute="leading" secondItem="GIx-xQ-BfB" secondAttribute="leading" id="BJP-zF-VEJ"/>
                                     <constraint firstAttribute="trailing" secondItem="t9q-pE-xBc" secondAttribute="trailing" id="HaO-Zv-rt8"/>
                                     <constraint firstItem="t9q-pE-xBc" firstAttribute="centerY" secondItem="GIx-xQ-BfB" secondAttribute="centerY" id="Hea-4U-xYU"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="h7k-99-4pM" appends="YES" id="eAp-pH-cHw"/>
+                                    <outletCollection property="gestureRecognizers" destination="fli-m1-9JU" appends="YES" id="Ha0-7T-8qS"/>
+                                    <outletCollection property="gestureRecognizers" destination="gxX-10-Af3" appends="YES" id="WF5-qq-qid"/>
+                                    <outletCollection property="gestureRecognizers" destination="Q4c-tm-uoS" appends="YES" id="MvT-2K-VYi"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,10 +134,34 @@
                         <viewLayoutGuide key="safeArea" id="M7p-TL-u1k"/>
                     </view>
                     <connections>
+                        <outlet property="downGestureRecognizer" destination="fli-m1-9JU" id="ZK5-65-YJc"/>
                         <outlet property="imageView" destination="t9q-pE-xBc" id="40Q-EL-wew"/>
+                        <outlet property="leftGestureRecognizer" destination="Q4c-tm-uoS" id="fjp-UL-SPX"/>
+                        <outlet property="rightGestureRecognizer" destination="gxX-10-Af3" id="DZe-d5-Ke1"/>
+                        <outlet property="upGestureRecognizer" destination="h7k-99-4pM" id="bwl-0h-3ob"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wsV-LH-tkC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="h7k-99-4pM" userLabel="Up Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="up:" destination="Xpk-3R-0v0" id="7YK-KM-5Uy"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="fli-m1-9JU" userLabel="Down Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="down:" destination="Xpk-3R-0v0" id="hdK-AY-Usm"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="gxX-10-Af3" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="right:" destination="Xpk-3R-0v0" id="7sB-dW-WwI"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Q4c-tm-uoS" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="left:" destination="Xpk-3R-0v0" id="DGe-fs-dLg"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1740" y="1671.8140929535234"/>
         </scene>
