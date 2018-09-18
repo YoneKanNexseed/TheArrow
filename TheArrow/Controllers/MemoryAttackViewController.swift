@@ -29,8 +29,8 @@ class MemoryAttackViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         arrowArray = ArrowFactory.createRundomArrowArray(level: level)
-        displayArrows()
         switchGestureEnabled(isEnabled: false)
+        displayArrows()
     }
     
     func displayArrows() -> Void {
@@ -56,11 +56,9 @@ class MemoryAttackViewController: UIViewController {
         leftGestureRecognizer.isEnabled = isEnabled
     }
     
-    
     @IBAction func up(_ sender: UISwipeGestureRecognizer) {
         if arrowArray[index].direction == ArrowConst.up {
-            print("up正解")
-            index += 1
+            correct()
         } else {
             print("up不正解")
         }
@@ -68,8 +66,7 @@ class MemoryAttackViewController: UIViewController {
     
     @IBAction func down(_ sender: UISwipeGestureRecognizer) {
         if arrowArray[index].direction == ArrowConst.down {
-            print("down正解")
-            index += 1
+            correct()
         } else {
             print("down不正解")
         }
@@ -77,8 +74,7 @@ class MemoryAttackViewController: UIViewController {
     
     @IBAction func right(_ sender: UISwipeGestureRecognizer) {
         if arrowArray[index].direction == ArrowConst.right {
-            print("right正解")
-            index += 1
+            correct()
         } else {
             print("right不正解")
         }
@@ -86,8 +82,7 @@ class MemoryAttackViewController: UIViewController {
     
     @IBAction func left(_ sender: UISwipeGestureRecognizer) {
         if arrowArray[index].direction == ArrowConst.left {
-            print("left正解")
-            index += 1
+            correct()
         } else {
             print("left不正解")
         }
@@ -97,4 +92,25 @@ class MemoryAttackViewController: UIViewController {
         switchGestureEnabled(isEnabled: true)
     }
 
+    func correct() -> Void {
+        print("正解")
+        index += 1
+        if arrowArray.count <= index {
+            levelClear()
+        }
+    }
+    
+    func levelClear() -> Void {
+        switchGestureEnabled(isEnabled: false)
+        // レベルアップ
+        level += 1
+        
+        // indexの初期化
+        index = 0
+        
+        arrowArray.removeAll()
+        
+        arrowArray = ArrowFactory.createRundomArrowArray(level: level)
+        displayArrows()
+    }
 }
