@@ -61,6 +61,7 @@ class MemoryAttackViewController: UIViewController {
             correct()
         } else {
             print("up不正解")
+            miss()
         }
     }
     
@@ -69,6 +70,7 @@ class MemoryAttackViewController: UIViewController {
             correct()
         } else {
             print("down不正解")
+            miss()
         }
     }
     
@@ -77,6 +79,7 @@ class MemoryAttackViewController: UIViewController {
             correct()
         } else {
             print("right不正解")
+            miss()
         }
     }
     
@@ -85,6 +88,7 @@ class MemoryAttackViewController: UIViewController {
             correct()
         } else {
             print("left不正解")
+            miss()
         }
     }
     
@@ -93,7 +97,7 @@ class MemoryAttackViewController: UIViewController {
     }
 
     func correct() -> Void {
-        print("正解")
+        print("正解\(index)")
         index += 1
         if arrowArray.count <= index {
             levelClear()
@@ -112,5 +116,14 @@ class MemoryAttackViewController: UIViewController {
         
         arrowArray = ArrowFactory.createRundomArrowArray(level: level)
         displayArrows()
+    }
+    
+    func miss() -> Void {
+        //まずは、同じstororyboard内であることをここで定義します
+        let storyboard: UIStoryboard = self.storyboard!
+        //ここで移動先のstoryboardを選択(今回の場合は先ほどsecondと名付けたのでそれを書きます)
+        let second = storyboard.instantiateViewController(withIdentifier: "result")
+        //ここが実際に移動するコードとなります
+        self.present(second, animated: false, completion: nil)
     }
 }
