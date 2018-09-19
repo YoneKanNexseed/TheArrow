@@ -19,9 +19,12 @@
 		0C315BDD214F95DB0094D6D5 /* TimeAttackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BDC214F95DB0094D6D5 /* TimeAttackViewController.swift */; };
 		0C315BDF214FDCF20094D6D5 /* MemoryAttackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */; };
 		0C315BE12150D9ED0094D6D5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BE02150D9ED0094D6D5 /* ResultViewController.swift */; };
+		0C315BE3215228A50094D6D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C315BE2215228A50094D6D5 /* GoogleService-Info.plist */; };
+		AA95C786EA651F47A3288B30 /* Pods_TheArrow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B529E66FC113CED21BCE299F /* Pods_TheArrow.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		082958E8F37C5C128492B4BD /* Pods-TheArrow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheArrow.release.xcconfig"; path = "Pods/Target Support Files/Pods-TheArrow/Pods-TheArrow.release.xcconfig"; sourceTree = "<group>"; };
 		0C315B8D214E5E620094D6D5 /* TheArrow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheArrow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C315B90214E5E620094D6D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C315B95214E5E620094D6D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -36,6 +39,9 @@
 		0C315BDC214F95DB0094D6D5 /* TimeAttackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAttackViewController.swift; sourceTree = "<group>"; };
 		0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAttackViewController.swift; sourceTree = "<group>"; };
 		0C315BE02150D9ED0094D6D5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		0C315BE2215228A50094D6D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B529E66FC113CED21BCE299F /* Pods_TheArrow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheArrow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDB7F84C33D53CF22E4B3864 /* Pods-TheArrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheArrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheArrow/Pods-TheArrow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA95C786EA651F47A3288B30 /* Pods_TheArrow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +61,8 @@
 			children = (
 				0C315B8F214E5E620094D6D5 /* TheArrow */,
 				0C315B8E214E5E620094D6D5 /* Products */,
+				402D20B2021716903E7A9F5F /* Pods */,
+				6757114C853FCBF6D25F2493 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,6 +86,7 @@
 				0C315B97214E5E670094D6D5 /* Assets.xcassets */,
 				0C315B99214E5E670094D6D5 /* LaunchScreen.storyboard */,
 				0C315B9C214E5E670094D6D5 /* Info.plist */,
+				0C315BE2215228A50094D6D5 /* GoogleService-Info.plist */,
 			);
 			path = TheArrow;
 			sourceTree = "<group>";
@@ -117,6 +127,23 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		402D20B2021716903E7A9F5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDB7F84C33D53CF22E4B3864 /* Pods-TheArrow.debug.xcconfig */,
+				082958E8F37C5C128492B4BD /* Pods-TheArrow.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6757114C853FCBF6D25F2493 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B529E66FC113CED21BCE299F /* Pods_TheArrow.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0C315B9F214E5E670094D6D5 /* Build configuration list for PBXNativeTarget "TheArrow" */;
 			buildPhases = (
+				633F75B50ACC75B23E7C0C7C /* [CP] Check Pods Manifest.lock */,
 				0C315B89214E5E620094D6D5 /* Sources */,
 				0C315B8A214E5E620094D6D5 /* Frameworks */,
 				0C315B8B214E5E620094D6D5 /* Resources */,
+				222BC510D1D8144706B479A5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,10 +207,52 @@
 				0C315B9B214E5E670094D6D5 /* LaunchScreen.storyboard in Resources */,
 				0C315B98214E5E670094D6D5 /* Assets.xcassets in Resources */,
 				0C315B96214E5E620094D6D5 /* Main.storyboard in Resources */,
+				0C315BE3215228A50094D6D5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		222BC510D1D8144706B479A5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TheArrow/Pods-TheArrow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TheArrow/Pods-TheArrow-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		633F75B50ACC75B23E7C0C7C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TheArrow-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0C315B89214E5E620094D6D5 /* Sources */ = {
@@ -338,6 +409,7 @@
 		};
 		0C315BA0214E5E670094D6D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDB7F84C33D53CF22E4B3864 /* Pods-TheArrow.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -347,7 +419,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yone-lab.TheArrow";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.the-arrow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -356,6 +428,7 @@
 		};
 		0C315BA1214E5E670094D6D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 082958E8F37C5C128492B4BD /* Pods-TheArrow.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -365,7 +438,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.yone-lab.TheArrow";
+				PRODUCT_BUNDLE_IDENTIFIER = "net.the-arrow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
