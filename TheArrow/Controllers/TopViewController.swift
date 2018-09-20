@@ -23,8 +23,10 @@ class TopViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let countDownViewController = segue.destination as! CountDownViewController
-        countDownViewController.withIdentifier = sender as! String
+        if segue.identifier == "countDown" {
+            let countDownViewController = segue.destination as! CountDownViewController
+            countDownViewController.withIdentifier = sender as! String
+        }
     }
 
 }

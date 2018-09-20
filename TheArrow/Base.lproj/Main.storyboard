@@ -214,6 +214,56 @@
             </objects>
             <point key="canvasLocation" x="2760.8000000000002" y="841.52923538230891"/>
         </scene>
+        <!--Item 2-->
+        <scene sceneID="OD2-xW-Ibd">
+            <objects>
+                <viewController id="bx5-8l-fSd" customClass="MemoryAttackRankingViewController" customModule="TheArrow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8DT-Kc-Xj3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="cxv-up-xus"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Thg-M8-Bki"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5t-Dm-7Ox" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="454" y="2461"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="GdJ-QW-tie">
+            <objects>
+                <viewController id="mvk-MW-huq" customClass="TimeAttackRankingViewController" customModule="TheArrow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rfr-vj-7JA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="3eq-CC-K8v"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="10W-QJ-s0q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDo-zT-xqA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-428" y="2461"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="5Gw-0m-WKr">
+            <objects>
+                <tabBarController id="BY1-w4-Lro" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRI-xR-L5z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mvk-MW-huq" kind="relationship" relationship="viewControllers" id="1ES-Hk-uv5"/>
+                        <segue destination="bx5-8l-fSd" kind="relationship" relationship="viewControllers" id="feO-F8-DLa"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dgC-6C-vTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137" y="1672"/>
+        </scene>
         <!--Memory Attack View Controller-->
         <scene sceneID="NMA-aT-gu2">
             <objects>
@@ -297,7 +347,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAO-6Z-bH4">
-                                <rect key="frame" x="115" y="231" width="145" height="133"/>
+                                <rect key="frame" x="115" y="155" width="145" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="タイムアタック"/>
                                 <connections>
@@ -305,11 +355,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Pi-se-bQy">
-                                <rect key="frame" x="115" y="415" width="145" height="116"/>
+                                <rect key="frame" x="115" y="339" width="145" height="116"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="記憶力アタック"/>
                                 <connections>
                                     <action selector="selectMemoryAttack:" destination="Prr-Kw-4lk" eventType="touchUpInside" id="DJO-En-2Rw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tne-AA-xT9">
+                                <rect key="frame" x="115" y="514" width="145" height="95"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="ランキング"/>
+                                <connections>
+                                    <segue destination="BY1-w4-Lro" kind="show" id="Wjk-CZ-5GJ"/>
                                 </connections>
                             </button>
                         </subviews>

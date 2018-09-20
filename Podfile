@@ -7,5 +7,6 @@ target 'TheArrow' do
 
   # Pods for TheArrow
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
 
 end

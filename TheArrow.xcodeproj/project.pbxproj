@@ -20,6 +20,8 @@
 		0C315BDF214FDCF20094D6D5 /* MemoryAttackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */; };
 		0C315BE12150D9ED0094D6D5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315BE02150D9ED0094D6D5 /* ResultViewController.swift */; };
 		0C315BE3215228A50094D6D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0C315BE2215228A50094D6D5 /* GoogleService-Info.plist */; };
+		0C315C052152BAAD0094D6D5 /* TimeAttackRankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315C042152BAAD0094D6D5 /* TimeAttackRankingViewController.swift */; };
+		0C315C072152BAF40094D6D5 /* MemoryAttackRankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C315C062152BAF40094D6D5 /* MemoryAttackRankingViewController.swift */; };
 		AA95C786EA651F47A3288B30 /* Pods_TheArrow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B529E66FC113CED21BCE299F /* Pods_TheArrow.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +42,8 @@
 		0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAttackViewController.swift; sourceTree = "<group>"; };
 		0C315BE02150D9ED0094D6D5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		0C315BE2215228A50094D6D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0C315C042152BAAD0094D6D5 /* TimeAttackRankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAttackRankingViewController.swift; sourceTree = "<group>"; };
+		0C315C062152BAF40094D6D5 /* MemoryAttackRankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryAttackRankingViewController.swift; sourceTree = "<group>"; };
 		B529E66FC113CED21BCE299F /* Pods_TheArrow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheArrow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB7F84C33D53CF22E4B3864 /* Pods-TheArrow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheArrow.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TheArrow/Pods-TheArrow.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +103,8 @@
 				0C315BDC214F95DB0094D6D5 /* TimeAttackViewController.swift */,
 				0C315BDE214FDCF20094D6D5 /* MemoryAttackViewController.swift */,
 				0C315BE02150D9ED0094D6D5 /* ResultViewController.swift */,
+				0C315C042152BAAD0094D6D5 /* TimeAttackRankingViewController.swift */,
+				0C315C062152BAF40094D6D5 /* MemoryAttackRankingViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -221,12 +227,28 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-TheArrow/Pods-TheArrow-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,12 +281,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C315C072152BAF40094D6D5 /* MemoryAttackRankingViewController.swift in Sources */,
 				0C315BD3214F750A0094D6D5 /* TopViewController.swift in Sources */,
 				0C315BB3214E90420094D6D5 /* ArrowFactory.swift in Sources */,
 				0C315BB0214E8E380094D6D5 /* Arrow.swift in Sources */,
 				0C315BDD214F95DB0094D6D5 /* TimeAttackViewController.swift in Sources */,
 				0C315BAD214E8C730094D6D5 /* ArrowConst.swift in Sources */,
 				0C315B91214E5E620094D6D5 /* AppDelegate.swift in Sources */,
+				0C315C052152BAAD0094D6D5 /* TimeAttackRankingViewController.swift in Sources */,
 				0C315BDF214FDCF20094D6D5 /* MemoryAttackViewController.swift in Sources */,
 				0C315BD5214F79920094D6D5 /* CountDownViewController.swift in Sources */,
 				0C315BE12150D9ED0094D6D5 /* ResultViewController.swift in Sources */,
